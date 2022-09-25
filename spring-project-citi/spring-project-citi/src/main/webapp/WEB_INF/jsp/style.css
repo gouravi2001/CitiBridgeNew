@@ -1,0 +1,415 @@
+/*Button CSS Starts*/
+
+.menu input {
+	font-size: 1rem;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    background-color: transparent
+}
+
+.no-outline:focus {
+  outline: none;
+}
+.buttons {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	margin: 10;
+    border: 1px solid transparent;
+    width: auto;
+   /* padding: 0.375rem 0.75rem;*/
+    padding: 12px 9px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.75rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+  .buttons:hover {
+    color: #fff;
+    background-color: #23272b;
+    border-color: #1d2124;
+}
+.tableButtons {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	margin: 10;
+    border: 1px solid transparent;
+    padding: 12px 6px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+  .tableButtons:hover {
+    color: #fff;
+    background-color: #23272b;
+    border-color: #1d2124;
+}
+ .butttons:hover
+ {
+    background: #8EC5FC;
+	transition-duration: 0.4s;
+  }
+/*Button CSS Ends*/ 
+.headerText{
+	margin: 13px;
+}
+.buttonBox{
+	display: inline;
+}
+body{
+	overflow:auto;
+}
+  table {
+    border-collapse: collapse;
+    vertical-align: baseline;
+    width: 100%;
+  }
+  tbody{
+  overflow-y:auto
+  }
+  th, td {
+    text-align: left;
+    vertical-align: baseline !important;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {background-color: #f2f2f2;}
+  :root {
+    /* --primary-color: rgba(13, 110, 139, 0.75); */
+    --overlay-color: #8EC5FC;
+    --menu-speed: 0.75s;
+  } 
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+    line-height: 1.4;
+    /* color: black; */
+  }
+  
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+  
+  /* Top and Bottom Hamburger Lines */
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+  }
+  
+  /* Move one of the lines down */
+  .menu-wrap .hamburger > div::after {
+    top: 10px;
+  }
+  
+  /* Toggler animate */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+  }
+  
+  /* turn line to x */
+  .menu-wrap .toggler:checked + .hamburger > div::before,
+  .menu-wrap .toggler:checked + .hamburger > div::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  
+  /* rotate on hover when checked */
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+  
+  /* show menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+  
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-wrap .menu > div {
+    background: var(--overlay-color);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vh;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+  
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 180vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: black;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transform: color 0.4s ease;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 3rem;
+  }
+  
+  .showcase {
+    background-color: var(--primary-color);
+    color: black;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .showcase:before {
+    content: "";
+    /* background: url("https://www.bluegranite.com/hubfs/blog-building-recommendation-system.jpg") no-repeat center center/cover; */
+    /* background-color: #25316D; */
+    background-color: #8EC5FC;
+    background-image: linear-gradient(129deg, #8EC5FC 0%, #E0C3FC 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .portFolio{
+  	margin:50px 5px;
+  }
+  .showcase .showcase-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+  }
+  
+  .showcase h1 {
+    font-size: 40px;
+  }
+  
+  .showcase {
+    font-size: 1.3rem;
+  }
+ 
+  .btn {
+    display: inline-block;
+    border: none;
+    /*background-color: var(--primary-color);
+    color: wheat;*/
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: opacity 1s ease-in;
+  }
+  
+ 
+  .btn:hover {
+    opacity: 0.9;
+  }
+ /*Loader css*/
+#loader {
+ display: none;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-bottom: 16px solid blue;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+ /*Loader css*/
+ 
+ .oaerror{
+  width:80%;
+  background-color: #ffffff;
+  padding:20px;
+  border:1px solid #eee;
+  border-left-width:5px;
+  border-radius: 3px;
+  margin:10px auto;
+  
+}
+.danger{
+	
+  	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	color:#d9534f;
+	border-radius: 20px;
+	padding: 10px;
+	text-align: center;
+  	border-left-color: #d9534f; /* Left side border color */
+  	background-color: rgba(217, 83, 79, 0.1); /*Same color as the left border with reduced alpha to 0.1*/
+}
+.form-control {
+	border-radius: 0.75rem;
+}
+.btn{
+	border-radius: 0.75rem;
+}
+  .navbuttons {
+  border-radius: 4px;
+  background-color: white;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width:auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  align-items: center;
+}
+
+.navbuttons span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.navbuttons span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0;
+}
+
+body{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(129deg, #8EC5FC 0%, #E0C3FC 100%);
+    
+}
+.login-form {
+    width: 400px;
+    height: 250px;
+    /* background-color: #34568B; */
+    padding: 2%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
